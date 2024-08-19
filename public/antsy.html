@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Antsy</title>
+    </head>
+    <body>
+        <h1>Antsy</h1>
+        <p>Welcome to Antsy! Do you like listening to the same song over and over again, but wish it would speed up ever so slightly each time? Here is your answer!</p>
+        <p>Just upload your song of choice, set your parameters, and Antsy will handle the rest! All functionality is local, so try whatever you like :)</p>
+        <!-- TODO: link a youtube url and play from that? opens up a lot of possibilities... -->
+        <!-- TODO: pitch shift doesnt seem to be working?... -->
+
+        <h2>File Upload</h2>
+        <input type="file" id="upload" accept=".ogg, .mp3, .wav, .mp4"/>
+        <br>
+        <audio id="audio" controls>
+            <source src="" id="src" />
+        </audio>
+
+        <br>
+
+        <label for="curSpeed">Current Speed</label>
+        <span id="curSpeed">n/a</span>
+        <br>
+        <label for="curPitch">Current pitch shift</label>
+        <span id="curPitch">n/a</span>
+
+        <br>
+
+        <label for="deltaSpeed">Iterative speed change:</label>
+        <input type="number" id="deltaSpeed" value="0.01">
+        <br>
+        <label for="deltaPitch">Iterative pitch change:</label>
+        <input type="number" id="deltaPitch" value="0">
+
+        <h3>Set to values</h3>
+        <label for="setSpeed">Iterative speed change:</label>
+        <input type="number" id="setSpeed" value="1">
+        <br>
+        <label for="setPitch">Iterative pitch change:</label>
+        <input type="number" id="setPitch" value="1">
+        <br>
+        <button id="setterButton">Set</button>
+
+        <footer>
+            <p>Inspired by 1998 Toontown Dance Mix, by Toontown Corporate Clash</p>
+        </footer>
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <!-- i dont think jquery is used outside like 1 copy-pasted line here.... remove? or embrace? -->
+        <script src="../src/antsy.js"></script>
+    </body>
+</html>
