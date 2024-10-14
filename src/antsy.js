@@ -4,7 +4,8 @@
 function handleFiles(event) {
     // load the file uploaded into audio
     var files = event.target.files;
-    $("#src").attr("src", URL.createObjectURL(files[0]));
+    // $("#src").attr("src", URL.createObjectURL(files[0]));
+    document.getElementById("src").setAttribute("src", URL.createObjectURL(files[0]));
     document.getElementById("audio").load();
 
     // reset audio replay value stuff
@@ -35,6 +36,7 @@ function replayProperties() {
     let curPitch = 1;
     let setSpeed = function(newSpeed) {
         curSpeed = newSpeed;
+        myAudio.preservesPitch = false;
         myAudio.playbackRate = curSpeed;
         updateDisplay();
     };
